@@ -51,7 +51,7 @@ document.querySelector("#byLocation").addEventListener("click", () => {
 
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=476e39419c6d310427b5be41ff22119e&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=YOUR_API_KEY&units=metric`
       );
 
       if (!response.ok) throw new Error("Location not found");
@@ -72,4 +72,5 @@ document.querySelector("#byLocation").addEventListener("click", () => {
   }, () => {
     outputDiv.innerHTML = "⚠️ Unable to access location.";
   });
+
 });
